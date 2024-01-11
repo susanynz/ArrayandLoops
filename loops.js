@@ -34,4 +34,32 @@ function encontrarSociedadSecreta(miembros) {
 
 
   //Online Status
-  
+  //1. Cantidad total de usuarios
+  //2. Calcular usuarios restantes eliminado el total de los primeros dos
+  //3. Obtener los primeros 2
+  //4. Imprimir mensaje
+
+  const users = ["mocking99", "susanita", "bomboncito"]
+
+  function getLength(x){
+    return x.length;
+  }
+
+  function calcRemaining(todos){
+    return todos - 2;
+  }
+
+  function getUsers(x){
+    const users = x[0] + x[1];
+    return users
+  }
+
+  function onlineStatus(x){
+    const todos = getLength(x);
+    const rest = calcRemaining(todos);
+    const firstUsers = getUsers(x);
+
+    console.log(`Users: ${firstUsers}, and ${rest} are online`)
+  }
+
+  onlineStatus(users);
